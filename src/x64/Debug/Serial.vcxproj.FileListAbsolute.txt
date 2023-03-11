@@ -1,0 +1,10 @@
+D:\VS\repos\cpp\Serial\x64\Debug\Serial.exe
+D:\VS\repos\cpp\Serial\x64\Debug\Serial.vcxproj.AssemblyReference.cache
+D:\VS\repos\cpp\Serial\x64\Debug\Serial.vcxproj.SuggestedBindingRedirects.cache
+D:\VS\repos\cpp\Serial\x64\Debug\Serial.MyForm.resources
+D:\VS\repos\cpp\Serial\x64\Debug\Serial.vcxproj.GenerateResource.cache
+C:\Users\yakub\OneDrive\Documents\SerialMonitor\src\x64\Debug\Serial.vcxproj.AssemblyReference.cache
+C:\Users\yakub\OneDrive\Documents\SerialMonitor\src\x64\Debug\Serial.vcxproj.SuggestedBindingRedirects.cache
+C:\Users\yakub\OneDrive\Documents\SerialMonitor\src\x64\Debug\Serial.MyForm.resources
+C:\Users\yakub\OneDrive\Documents\SerialMonitor\src\x64\Debug\Serial.vcxproj.GenerateResource.cache
+C:\Users\yakub\OneDrive\Documents\SerialMonitor\src\x64\Debug\Serial.exe
