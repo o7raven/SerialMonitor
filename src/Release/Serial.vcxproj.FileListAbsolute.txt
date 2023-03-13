@@ -1,0 +1,5 @@
+C:\Users\yakub\OneDrive\Documents\SerialMonitor\src\Release\Serial.vcxproj.AssemblyReference.cache
+C:\Users\yakub\OneDrive\Documents\SerialMonitor\src\Release\Serial.vcxproj.SuggestedBindingRedirects.cache
+C:\Users\yakub\OneDrive\Documents\SerialMonitor\src\Release\Serial.MyForm.resources
+C:\Users\yakub\OneDrive\Documents\SerialMonitor\src\Release\Serial.vcxproj.GenerateResource.cache
+C:\Users\yakub\OneDrive\Documents\SerialMonitor\src\Release\Serial.exe
