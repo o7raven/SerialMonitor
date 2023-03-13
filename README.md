@@ -6,7 +6,6 @@ An application that allows you to `send` and `receive` data using serial ports.
 
 
 
-![App Screenshot](/imgs/screenshot.png)
 
 
 ## Features
