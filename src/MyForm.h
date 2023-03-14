@@ -375,9 +375,9 @@ namespace Serial {
 			this->version->AutoSize = true;
 			this->version->Location = System::Drawing::Point(14, 19);
 			this->version->Name = L"version";
-			this->version->Size = System::Drawing::Size(37, 13);
+			this->version->Size = System::Drawing::Size(41, 13);
 			this->version->TabIndex = 1;
-			this->version->Text = L"v1.0.1";
+			this->version->Text = L"version";
 			// 
 			// btnX
 			// 
@@ -453,6 +453,8 @@ namespace Serial {
 		}
 #pragma endregion
 	private: System::Void MyForm_Load(System::Object ^ sender, System::EventArgs ^ e) {
+		version->Text = "v1.0.2";
+
 		array<Object^>^ comport = SerialPort::GetPortNames();
 		cbPort->Items->AddRange(comport);
 		cbPort->SelectedIndex = 0;
