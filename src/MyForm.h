@@ -131,7 +131,7 @@ namespace Serial {
 				static_cast<System::Byte>(0)));
 			this->baudRate->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(241)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
 				static_cast<System::Int32>(static_cast<System::Byte>(238)));
-			this->baudRate->Location = System::Drawing::Point(8, 133);
+			this->baudRate->Location = System::Drawing::Point(8, 137);
 			this->baudRate->Name = L"baudRate";
 			this->baudRate->Size = System::Drawing::Size(109, 22);
 			this->baudRate->TabIndex = 1;
@@ -155,6 +155,7 @@ namespace Serial {
 			this->cbPort->Size = System::Drawing::Size(153, 35);
 			this->cbPort->TabIndex = 2;
 			this->cbPort->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::cbPort_SelectedIndexChanged);
+			this->cbPort->SelectedValueChanged += gcnew System::EventHandler(this, &MyForm::cbPort_SelectedValueChanged);
 			// 
 			// cbBaudRate
 			// 
@@ -302,7 +303,7 @@ namespace Serial {
 				static_cast<System::Byte>(0)));
 			this->dataBits->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(241)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
 				static_cast<System::Int32>(static_cast<System::Byte>(238)));
-			this->dataBits->Location = System::Drawing::Point(8, 259);
+			this->dataBits->Location = System::Drawing::Point(8, 261);
 			this->dataBits->Name = L"dataBits";
 			this->dataBits->Size = System::Drawing::Size(109, 22);
 			this->dataBits->TabIndex = 10;
@@ -452,14 +453,11 @@ namespace Serial {
 		}
 #pragma endregion
 	private: System::Void MyForm_Load(System::Object ^ sender, System::EventArgs ^ e) {
-			
-
-
 		array<Object^>^ comport = SerialPort::GetPortNames();
 		cbPort->Items->AddRange(comport);
 		cbPort->SelectedIndex = 0;
 
-		array<Object^>^ baudRate = { 9600, 57600, 115200 };
+		array<Object^>^ baudRate = { 9600, 600, 1800, 4800, 28800, 57600, 115200, 230400, 576000 };
 		cbBaudRate->Items->AddRange(baudRate);
 		cbBaudRate->SelectedIndex = 0;
 
@@ -492,9 +490,6 @@ namespace Serial {
 		tm* ltm = localtime(&now);
 		try {
 			if (!(sp->IsOpen)) {
-				if (sp->IsOpen) {
-					sp->Close();
-				}
 				sp->PortName = cbPort->Text;
 				sp->BaudRate = Int32::Parse(cbBaudRate->Text);
 				if(cbParity->Text == "None") {sp->Parity = Parity::None;}
@@ -512,6 +507,7 @@ namespace Serial {
 				sp->Close();
 				tbConsole->AppendText("[" + ltm->tm_hour + ":" + ltm->tm_min + "]" + " Disconnected " + "[" + sp->PortName + "]" + Environment::NewLine);
 				btnConnect->Text = "Connect";
+
 			}
 		}
 		catch (...) {
@@ -574,11 +570,26 @@ private: System::Void btnMin_Click(System::Object^ sender, System::EventArgs^ e)
 
 
 private: System::Void btnRefresh_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (sp->IsOpen) {
+		sp->Close();
+		btnConnect->Text = "Connect";
+		tbConsole->AppendText("[002] Disconnected [" + sp->PortName + "]");
+	}
 	array<Object^>^ comport = SerialPort::GetPortNames();
 	cbPort->Items->Clear();
 	cbPort->Items->AddRange(comport);
 	cbPort->SelectedIndex = 0;
 }
+
+private: System::Void cbPort_SelectedValueChanged(System::Object^ sender, System::EventArgs^ e) {
+	if (sp->IsOpen) {
+		tbConsole->AppendText("[002] Disconnected [" + sp->PortName + "]");
+		btnConnect->Text = "Connect";
+		sp->Close();
+	}
+
+}
+
 };
 
 
