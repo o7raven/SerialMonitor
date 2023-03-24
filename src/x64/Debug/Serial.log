@@ -1,4 +1,2 @@
-﻿  MyForm.cpp
-C:\Users\yakub\OneDrive\Documents\SerialMonitor\src\MyForm.h(492,13): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  MyForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+﻿  MyForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   Serial.vcxproj -> C:\Users\yakub\OneDrive\Documents\SerialMonitor\src\x64\Debug\Serial.exe

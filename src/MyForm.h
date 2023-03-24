@@ -453,7 +453,7 @@ namespace Serial {
 		}
 #pragma endregion
 	private: System::Void MyForm_Load(System::Object ^ sender, System::EventArgs ^ e) {
-		version->Text = "v1.0.2";
+		version->Text = "v1.0.3";
 
 		array<Object^>^ comport = SerialPort::GetPortNames();
 		cbPort->Items->AddRange(comport);
