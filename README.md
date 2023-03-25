@@ -1,5 +1,5 @@
 
-# Serial Monitor ![Releases](https://badgen.net/github/releases/o7raven/Serialmonitor) ![Stars](https://badgen.net/github/stars/o7raven/SerialMonitor) ![Latest](https://badgen.net/github/tag/o7raven/SerialMonitor) ![Branches](https://badgen.net/github/branches/o7raven/SerialMonitor) [![MIT License](https://badgen.net/badge/License/MIT/green)](https://choosealicense.com/licenses/mit/) 
+# Serial Monitor [![Releases](https://badgen.net/github/releases/o7raven/Serialmonitor)](https://github.com/o7raven/SerialMonitor/releases) ![Stars](https://badgen.net/github/stars/o7raven/SerialMonitor) [![Latest](https://badgen.net/github/tag/o7raven/SerialMonitor)](https://github.com/o7raven/SerialMonitor/tags) ![Branches](https://badgen.net/github/branches/o7raven/SerialMonitor) [![MIT License](https://badgen.net/badge/License/MIT/green)](https://choosealicense.com/licenses/mit/) 
 ![CodeSnippet](imgs\codeIntr2.png)
 
 
