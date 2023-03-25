@@ -1,13 +1,13 @@
 
 # Serial Monitor ![Releases](https://badgen.net/github/releases/o7raven/Serialmonitor) ![Stars](https://badgen.net/github/stars/o7raven/SerialMonitor) ![Latest](https://badgen.net/github/tag/o7raven/SerialMonitor) ![Branches](https://badgen.net/github/branches/o7raven/SerialMonitor) [![MIT License](https://badgen.net/badge/License/MIT/green)](https://choosealicense.com/licenses/mit/) 
-![CodeSnippet](imgs\codeIntr2.png)
+![CodeSnippet](https://github.com/o7raven/SerialMonitor/blob/main/imgs/codeIntr2.png)
 
 
 An application that allows you to `send` and `receive` data through `serial ports`.
 
 Allows you to configure additional settings packed in a retro looking UI
 
-![Logo](imgs\app-screenshot1.0.5.png)
+![Logo](https://github.com/o7raven/SerialMonitor/blob/main/imgs/app-screenshot1.0.5.png)
 
 
 
