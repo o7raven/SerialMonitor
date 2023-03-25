@@ -59,6 +59,9 @@ namespace Serial {
 	private: System::Windows::Forms::Label^ version;
 	private: System::Windows::Forms::Button^ btnRefresh;
 
+	private: System::Windows::Forms::Button^ btnMinimize;
+
+
 
 
 
@@ -105,6 +108,7 @@ namespace Serial {
 			this->console = (gcnew System::Windows::Forms::Label());
 			this->tbConsole = (gcnew System::Windows::Forms::TextBox());
 			this->BorderPanel = (gcnew System::Windows::Forms::Panel());
+			this->btnMinimize = (gcnew System::Windows::Forms::Button());
 			this->version = (gcnew System::Windows::Forms::Label());
 			this->btnX = (gcnew System::Windows::Forms::Button());
 			this->btnRefresh = (gcnew System::Windows::Forms::Button());
@@ -118,7 +122,7 @@ namespace Serial {
 				static_cast<System::Byte>(0)));
 			this->serialPort->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(241)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
 				static_cast<System::Int32>(static_cast<System::Byte>(238)));
-			this->serialPort->Location = System::Drawing::Point(8, 72);
+			this->serialPort->Location = System::Drawing::Point(8, 56);
 			this->serialPort->Name = L"serialPort";
 			this->serialPort->Size = System::Drawing::Size(131, 22);
 			this->serialPort->TabIndex = 0;
@@ -131,7 +135,7 @@ namespace Serial {
 				static_cast<System::Byte>(0)));
 			this->baudRate->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(241)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
 				static_cast<System::Int32>(static_cast<System::Byte>(238)));
-			this->baudRate->Location = System::Drawing::Point(8, 137);
+			this->baudRate->Location = System::Drawing::Point(8, 122);
 			this->baudRate->Name = L"baudRate";
 			this->baudRate->Size = System::Drawing::Size(109, 22);
 			this->baudRate->TabIndex = 1;
@@ -150,7 +154,7 @@ namespace Serial {
 			this->cbPort->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(241)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
 				static_cast<System::Int32>(static_cast<System::Byte>(238)));
 			this->cbPort->FormattingEnabled = true;
-			this->cbPort->Location = System::Drawing::Point(12, 97);
+			this->cbPort->Location = System::Drawing::Point(12, 81);
 			this->cbPort->Name = L"cbPort";
 			this->cbPort->Size = System::Drawing::Size(153, 35);
 			this->cbPort->TabIndex = 2;
@@ -167,7 +171,7 @@ namespace Serial {
 			this->cbBaudRate->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(241)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
 				static_cast<System::Int32>(static_cast<System::Byte>(238)));
 			this->cbBaudRate->FormattingEnabled = true;
-			this->cbBaudRate->Location = System::Drawing::Point(12, 162);
+			this->cbBaudRate->Location = System::Drawing::Point(12, 147);
 			this->cbBaudRate->Name = L"cbBaudRate";
 			this->cbBaudRate->Size = System::Drawing::Size(257, 35);
 			this->cbBaudRate->TabIndex = 3;
@@ -178,9 +182,9 @@ namespace Serial {
 			this->btnConnect->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->btnConnect->Font = (gcnew System::Drawing::Font(L"Bahnschrift", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnConnect->Location = System::Drawing::Point(12, 593);
+			this->btnConnect->Location = System::Drawing::Point(12, 601);
 			this->btnConnect->Name = L"btnConnect";
-			this->btnConnect->Size = System::Drawing::Size(201, 43);
+			this->btnConnect->Size = System::Drawing::Size(257, 35);
 			this->btnConnect->TabIndex = 4;
 			this->btnConnect->Text = L"Connect";
 			this->btnConnect->UseVisualStyleBackColor = true;
@@ -199,12 +203,12 @@ namespace Serial {
 				static_cast<System::Byte>(0)));
 			this->tbData->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(240)), static_cast<System::Int32>(static_cast<System::Byte>(238)),
 				static_cast<System::Int32>(static_cast<System::Byte>(237)));
-			this->tbData->Location = System::Drawing::Point(288, 97);
+			this->tbData->Location = System::Drawing::Point(288, 81);
 			this->tbData->Multiline = true;
 			this->tbData->Name = L"tbData";
 			this->tbData->ReadOnly = true;
 			this->tbData->ScrollBars = System::Windows::Forms::ScrollBars::Vertical;
-			this->tbData->Size = System::Drawing::Size(484, 472);
+			this->tbData->Size = System::Drawing::Size(484, 514);
 			this->tbData->TabIndex = 5;
 			this->tbData->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
@@ -250,13 +254,13 @@ namespace Serial {
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->SerialMonitor->AutoSize = true;
 			this->SerialMonitor->BackColor = System::Drawing::Color::Transparent;
-			this->SerialMonitor->Font = (gcnew System::Drawing::Font(L"Cascadia Mono ExtraLight", 23.25F, System::Drawing::FontStyle::Regular,
+			this->SerialMonitor->Font = (gcnew System::Drawing::Font(L"Cascadia Mono ExtraLight", 12.75F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->SerialMonitor->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(241)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
 				static_cast<System::Int32>(static_cast<System::Byte>(238)));
-			this->SerialMonitor->Location = System::Drawing::Point(281, 53);
+			this->SerialMonitor->Location = System::Drawing::Point(284, 56);
 			this->SerialMonitor->Name = L"SerialMonitor";
-			this->SerialMonitor->Size = System::Drawing::Size(284, 41);
+			this->SerialMonitor->Size = System::Drawing::Size(164, 22);
 			this->SerialMonitor->TabIndex = 8;
 			this->SerialMonitor->Text = L"Serial Monitor";
 			this->SerialMonitor->Click += gcnew System::EventHandler(this, &MyForm::SerialMonitor_Click);
@@ -273,7 +277,7 @@ namespace Serial {
 			this->cbDataBits->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(241)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
 				static_cast<System::Int32>(static_cast<System::Byte>(238)));
 			this->cbDataBits->FormattingEnabled = true;
-			this->cbDataBits->Location = System::Drawing::Point(12, 284);
+			this->cbDataBits->Location = System::Drawing::Point(12, 277);
 			this->cbDataBits->Name = L"cbDataBits";
 			this->cbDataBits->Size = System::Drawing::Size(257, 35);
 			this->cbDataBits->TabIndex = 12;
@@ -290,7 +294,7 @@ namespace Serial {
 			this->cbParity->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(241)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
 				static_cast<System::Int32>(static_cast<System::Byte>(238)));
 			this->cbParity->FormattingEnabled = true;
-			this->cbParity->Location = System::Drawing::Point(12, 223);
+			this->cbParity->Location = System::Drawing::Point(12, 210);
 			this->cbParity->Name = L"cbParity";
 			this->cbParity->Size = System::Drawing::Size(257, 35);
 			this->cbParity->TabIndex = 11;
@@ -303,7 +307,7 @@ namespace Serial {
 				static_cast<System::Byte>(0)));
 			this->dataBits->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(241)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
 				static_cast<System::Int32>(static_cast<System::Byte>(238)));
-			this->dataBits->Location = System::Drawing::Point(8, 261);
+			this->dataBits->Location = System::Drawing::Point(8, 254);
 			this->dataBits->Name = L"dataBits";
 			this->dataBits->Size = System::Drawing::Size(109, 22);
 			this->dataBits->TabIndex = 10;
@@ -316,7 +320,7 @@ namespace Serial {
 				static_cast<System::Byte>(0)));
 			this->parity->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(241)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
 				static_cast<System::Int32>(static_cast<System::Byte>(238)));
-			this->parity->Location = System::Drawing::Point(8, 198);
+			this->parity->Location = System::Drawing::Point(8, 185);
 			this->parity->Name = L"parity";
 			this->parity->Size = System::Drawing::Size(76, 22);
 			this->parity->TabIndex = 9;
@@ -325,13 +329,13 @@ namespace Serial {
 			// console
 			// 
 			this->console->AutoSize = true;
-			this->console->Font = (gcnew System::Drawing::Font(L"Cascadia Mono ExtraLight", 20.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->console->Font = (gcnew System::Drawing::Font(L"Cascadia Mono ExtraLight", 12.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->console->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(241)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
 				static_cast<System::Int32>(static_cast<System::Byte>(238)));
-			this->console->Location = System::Drawing::Point(6, 333);
+			this->console->Location = System::Drawing::Point(8, 328);
 			this->console->Name = L"console";
-			this->console->Size = System::Drawing::Size(134, 35);
+			this->console->Size = System::Drawing::Size(87, 22);
 			this->console->TabIndex = 14;
 			this->console->Text = L"Console";
 			// 
@@ -347,11 +351,11 @@ namespace Serial {
 				static_cast<System::Byte>(0)));
 			this->tbConsole->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(240)), static_cast<System::Int32>(static_cast<System::Byte>(238)),
 				static_cast<System::Int32>(static_cast<System::Byte>(237)));
-			this->tbConsole->Location = System::Drawing::Point(12, 369);
+			this->tbConsole->Location = System::Drawing::Point(12, 353);
 			this->tbConsole->Multiline = true;
 			this->tbConsole->Name = L"tbConsole";
 			this->tbConsole->ReadOnly = true;
-			this->tbConsole->Size = System::Drawing::Size(201, 234);
+			this->tbConsole->Size = System::Drawing::Size(257, 242);
 			this->tbConsole->TabIndex = 13;
 			this->tbConsole->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
 			// 
@@ -361,6 +365,7 @@ namespace Serial {
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->BorderPanel->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(14)), static_cast<System::Int32>(static_cast<System::Byte>(131)),
 				static_cast<System::Int32>(static_cast<System::Byte>(136)));
+			this->BorderPanel->Controls->Add(this->btnMinimize);
 			this->BorderPanel->Controls->Add(this->version);
 			this->BorderPanel->Controls->Add(this->btnX);
 			this->BorderPanel->Location = System::Drawing::Point(-2, -2);
@@ -369,6 +374,24 @@ namespace Serial {
 			this->BorderPanel->TabIndex = 15;
 			this->BorderPanel->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::BorderPanel_MouseDown);
 			this->BorderPanel->MouseMove += gcnew System::Windows::Forms::MouseEventHandler(this, &MyForm::BorderPanel_MouseMove);
+			// 
+			// btnMinimize
+			// 
+			this->btnMinimize->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->btnMinimize->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(14)), static_cast<System::Int32>(static_cast<System::Byte>(131)),
+				static_cast<System::Int32>(static_cast<System::Byte>(136)));
+			this->btnMinimize->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnMinimize->FlatAppearance->BorderSize = 0;
+			this->btnMinimize->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->btnMinimize->Font = (gcnew System::Drawing::Font(L"Ebrima", 20, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btnMinimize->Location = System::Drawing::Point(665, 0);
+			this->btnMinimize->Name = L"btnMinimize";
+			this->btnMinimize->Size = System::Drawing::Size(63, 46);
+			this->btnMinimize->TabIndex = 2;
+			this->btnMinimize->Text = L"-";
+			this->btnMinimize->UseVisualStyleBackColor = false;
+			this->btnMinimize->Click += gcnew System::EventHandler(this, &MyForm::btnMinimize_Click);
 			// 
 			// version
 			// 
@@ -382,17 +405,19 @@ namespace Serial {
 			// btnX
 			// 
 			this->btnX->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
+			this->btnX->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(14)), static_cast<System::Int32>(static_cast<System::Byte>(131)),
+				static_cast<System::Int32>(static_cast<System::Byte>(136)));
 			this->btnX->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->btnX->FlatAppearance->BorderSize = 0;
 			this->btnX->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnX->Font = (gcnew System::Drawing::Font(L"Ebrima", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnX->Font = (gcnew System::Drawing::Font(L"Ebrima", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnX->Location = System::Drawing::Point(725, 0);
 			this->btnX->Name = L"btnX";
 			this->btnX->Size = System::Drawing::Size(63, 46);
 			this->btnX->TabIndex = 0;
-			this->btnX->Text = L"X";
-			this->btnX->UseVisualStyleBackColor = true;
+			this->btnX->Text = L"x";
+			this->btnX->UseVisualStyleBackColor = false;
 			this->btnX->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
 			// btnRefresh
@@ -406,7 +431,7 @@ namespace Serial {
 				static_cast<System::Byte>(0)));
 			this->btnRefresh->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(241)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
 				static_cast<System::Int32>(static_cast<System::Byte>(238)));
-			this->btnRefresh->Location = System::Drawing::Point(159, 97);
+			this->btnRefresh->Location = System::Drawing::Point(159, 81);
 			this->btnRefresh->Name = L"btnRefresh";
 			this->btnRefresh->Size = System::Drawing::Size(110, 35);
 			this->btnRefresh->TabIndex = 16;
@@ -453,7 +478,7 @@ namespace Serial {
 		}
 #pragma endregion
 	private: System::Void MyForm_Load(System::Object ^ sender, System::EventArgs ^ e) {
-		version->Text = "v1.0.3";
+		version->Text = "v1.0.5";
 
 		array<Object^>^ comport = SerialPort::GetPortNames();
 		cbPort->Items->AddRange(comport);
@@ -592,6 +617,9 @@ private: System::Void cbPort_SelectedValueChanged(System::Object^ sender, System
 
 }
 
+private: System::Void btnMinimize_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->WindowState = FormWindowState::Minimized;
+}
 };
 
 
