@@ -1,7 +1,7 @@
 # Serial Monitor
 
  
-An application that allows you to `send` and `receive` data using serial ports.
+An application that allows you to `send` and `receive` data using serial ports, configure additional settings packed in a nice looking UI.
 
 
 
@@ -15,11 +15,12 @@ An application that allows you to `send` and `receive` data using serial ports.
 - Choose parity mode
 - Set data bits
 - Includes console containing your connection information
-- Responsive design
+- It works
+- Easy to understand, easy to use
 
 ## Authors
 
-- [@raven](https://www.github.com/o7raven) - [Twitter](https://twitter.com/o7ravenxd)
+- [@raven](https://www.github.com/o7raven)
 
 
 ## License
