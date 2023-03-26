@@ -23,7 +23,9 @@ Allows you to configure additional settings packed in a retro looking UI
 
 You can either `build` the project on your own, or you can [**download the program here**](https://github.com/o7raven/SerialMonitor/releases)
 
-    
+## Credits
+- [.NET](https://dotnet.microsoft.com/en-us/)
+- [Color palette](https://stackoverflow.com/questions/14212660/how-to-access-my-9-data-bit-serial-port-on-a-pc)
 
 
 ## Author
