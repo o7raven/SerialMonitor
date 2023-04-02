@@ -25,7 +25,7 @@ You can either `build` the project on your own, or you can [**download the progr
 
 ## Credits
 - [.NET](https://dotnet.microsoft.com/en-us/)
-- [Color palette](https://stackoverflow.com/questions/14212660/how-to-access-my-9-data-bit-serial-port-on-a-pc)
+- [Color palette](https://colorhunt.co/palette/2c33332e4f4f0e8388cbe4de)
 
 
 ## Author
