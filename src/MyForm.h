@@ -179,7 +179,12 @@ namespace Serial {
 			// btnConnect
 			// 
 			this->btnConnect->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left));
+			this->btnConnect->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(92)), static_cast<System::Int32>(static_cast<System::Byte>(186)),
+				static_cast<System::Int32>(static_cast<System::Byte>(191)));
 			this->btnConnect->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnConnect->FlatAppearance->BorderColor = System::Drawing::Color::White;
+			this->btnConnect->FlatAppearance->BorderSize = 0;
+			this->btnConnect->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnConnect->Font = (gcnew System::Drawing::Font(L"Bahnschrift", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnConnect->Location = System::Drawing::Point(12, 601);
@@ -187,7 +192,7 @@ namespace Serial {
 			this->btnConnect->Size = System::Drawing::Size(257, 35);
 			this->btnConnect->TabIndex = 4;
 			this->btnConnect->Text = L"Connect";
-			this->btnConnect->UseVisualStyleBackColor = true;
+			this->btnConnect->UseVisualStyleBackColor = false;
 			this->btnConnect->Click += gcnew System::EventHandler(this, &MyForm::btnConnect_Click);
 			// 
 			// tbData
@@ -197,7 +202,7 @@ namespace Serial {
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->tbData->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(46)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
 				static_cast<System::Int32>(static_cast<System::Byte>(79)));
-			this->tbData->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->tbData->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->tbData->Cursor = System::Windows::Forms::Cursors::Default;
 			this->tbData->Font = (gcnew System::Drawing::Font(L"Cascadia Mono SemiLight", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -216,15 +221,17 @@ namespace Serial {
 			// 
 			this->tbSend->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
-			this->tbSend->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(100)), static_cast<System::Int32>(static_cast<System::Byte>(146)),
-				static_cast<System::Int32>(static_cast<System::Byte>(146)));
+			this->tbSend->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(71)), static_cast<System::Int32>(static_cast<System::Byte>(115)),
+				static_cast<System::Int32>(static_cast<System::Byte>(115)));
 			this->tbSend->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->tbSend->Font = (gcnew System::Drawing::Font(L"Cascadia Mono SemiLight", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
+			this->tbSend->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(240)), static_cast<System::Int32>(static_cast<System::Byte>(238)),
+				static_cast<System::Int32>(static_cast<System::Byte>(237)));
 			this->tbSend->Location = System::Drawing::Point(288, 602);
 			this->tbSend->Multiline = true;
 			this->tbSend->Name = L"tbSend";
-			this->tbSend->Size = System::Drawing::Size(405, 34);
+			this->tbSend->Size = System::Drawing::Size(385, 34);
 			this->tbSend->TabIndex = 6;
 			this->tbSend->TextChanged += gcnew System::EventHandler(this, &MyForm::tbSend_TextChanged);
 			this->tbSend->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &MyForm::tbSend_KeyDown);
@@ -232,8 +239,12 @@ namespace Serial {
 			// btnSend
 			// 
 			this->btnSend->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+			this->btnSend->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(92)), static_cast<System::Int32>(static_cast<System::Byte>(186)),
+				static_cast<System::Int32>(static_cast<System::Byte>(191)));
 			this->btnSend->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->btnSend->FlatAppearance->BorderColor = System::Drawing::Color::White;
 			this->btnSend->FlatAppearance->BorderSize = 0;
+			this->btnSend->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->btnSend->Font = (gcnew System::Drawing::Font(L"Bahnschrift", 15, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnSend->Location = System::Drawing::Point(679, 601);
@@ -241,7 +252,7 @@ namespace Serial {
 			this->btnSend->Size = System::Drawing::Size(93, 35);
 			this->btnSend->TabIndex = 7;
 			this->btnSend->Text = L"Send";
-			this->btnSend->UseVisualStyleBackColor = true;
+			this->btnSend->UseVisualStyleBackColor = false;
 			this->btnSend->Click += gcnew System::EventHandler(this, &MyForm::btnSend_Click);
 			// 
 			// sp
@@ -345,7 +356,7 @@ namespace Serial {
 				| System::Windows::Forms::AnchorStyles::Left));
 			this->tbConsole->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(46)), static_cast<System::Int32>(static_cast<System::Byte>(79)),
 				static_cast<System::Int32>(static_cast<System::Byte>(79)));
-			this->tbConsole->BorderStyle = System::Windows::Forms::BorderStyle::None;
+			this->tbConsole->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->tbConsole->Cursor = System::Windows::Forms::Cursors::Default;
 			this->tbConsole->Font = (gcnew System::Drawing::Font(L"Cascadia Mono SemiLight", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -427,13 +438,13 @@ namespace Serial {
 			this->btnRefresh->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->btnRefresh->FlatAppearance->BorderColor = System::Drawing::Color::White;
 			this->btnRefresh->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->btnRefresh->Font = (gcnew System::Drawing::Font(L"Cascadia Code ExtraLight", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnRefresh->Font = (gcnew System::Drawing::Font(L"Cascadia Code ExtraLight", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnRefresh->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(241)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
 				static_cast<System::Int32>(static_cast<System::Byte>(238)));
-			this->btnRefresh->Location = System::Drawing::Point(159, 81);
+			this->btnRefresh->Location = System::Drawing::Point(171, 81);
 			this->btnRefresh->Name = L"btnRefresh";
-			this->btnRefresh->Size = System::Drawing::Size(110, 35);
+			this->btnRefresh->Size = System::Drawing::Size(98, 35);
 			this->btnRefresh->TabIndex = 16;
 			this->btnRefresh->Text = L"Refresh";
 			this->btnRefresh->UseVisualStyleBackColor = false;
@@ -478,7 +489,7 @@ namespace Serial {
 		}
 #pragma endregion
 	private: System::Void MyForm_Load(System::Object ^ sender, System::EventArgs ^ e) {
-		version->Text = "v1.0.5";
+		version->Text = "v1.0.6";
 
 		array<Object^>^ comport = SerialPort::GetPortNames();
 		cbPort->Items->AddRange(comport);
@@ -492,10 +503,9 @@ namespace Serial {
 		cbParity->Items->AddRange(parity);
 		cbParity->SelectedIndex = 0;
 
-		array<Object^>^ dataBits = { 8,7,6 };
+		array<Object^>^ dataBits = { 8,7,6,5,9 };
 		cbDataBits->Items->AddRange(dataBits);
 		cbDataBits->SelectedIndex = 0;
-
 	}
 	
 	private: System::Void cbPort_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
